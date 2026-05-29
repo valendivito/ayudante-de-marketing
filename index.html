@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autopartes M3 — Accesorios y Repuestos para tu Auto | Munro, Zona Norte</title>
+  <meta name="description" content="Autopartes M3: 10 años equipando autos en Munro. Fundas a medida, accesorios de interior y exterior, repuestos y servicio de instalación. Asesoramiento personalizado por WhatsApp. Av. Mitre 3495, Munro." />
+  <meta name="keywords" content="autopartes munro, accesorios auto zona norte, fundas a medida buenos aires, repuestos vicente lopez, alfombras termoformadas, accesorios automotrices munro, autopartes m3" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://autopartesm3.com.ar/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://autopartesm3.com.ar/" />
+  <meta property="og:title" content="Autopartes M3 — Equipamos tu auto como si fuera nuestro" />
+  <meta property="og:description" content="10 años en Munro. Fundas a medida, accesorios, repuestos e instalación profesional. Consultá por WhatsApp ahora." />
+  <meta property="og:locale" content="es_AR" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoPartsStore",
+    "name": "Autopartes M3",
+    "description": "Accesorios, repuestos e instalación profesional para autos en Munro, Buenos Aires.",
+    "url": "https://autopartesm3.com.ar",
+    "telephone": "+549115126-6597",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Av. Bartolomé Mitre 3495",
+      "addressLocality": "Munro",
+      "addressRegion": "Buenos Aires",
+      "addressCountry": "AR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": -34.5194651, "longitude": -58.5244505 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "13:00" }
+    ],
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "100" },
+    "sameAs": ["https://www.instagram.com/autopartesm3"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ══ TOKENS ══ */
+    :root {
+      --c-bg:       #FFFFFF;
+      --c-bg-alt:   #F0F4FF;
+      --c-bg-dark:  #0F172A;
+      --c-blue:     #1E40AF;
+      --c-blue-mid: #2563EB;
+      --c-blue-lt:  #EFF6FF;
+      --c-red:      #E10600;
+      --c-text:     #0F172A;
+      --c-muted:    #64748B;
+      --c-border:   #E2E8F0;
+      --c-card:     #FFFFFF;
+      --c-wa:       #25D366;
+      --c-wa-dark:  #1DA851;
+
+      --f-display: 'Bebas Neue', sans-serif;
+      --f-body:    'Inter', sans-serif;
+      --f-mono:    'JetBrains Mono', monospace;
+
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+
+      --shadow-sm:   0 1px 4px rgba(0,0,0,.08);
+      --shadow-card: 0 4px 20px rgba(30,64,175,.1);
+      --shadow-blue: 0 6px 24px rgba(37,99,235,.3);
+      --transition:  .25s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* ══ RESET ══ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--f-body); background: var(--c-bg); color: var(--c-text); overflow-x: hidden; line-height: 1.6; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    button { cursor: pointer; font-family: var(--f-body); border: none; background: none; }
+
+    /* ══ UTILS ══ */
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    .text-center { text-align: center; }
+
+    .section-tag {
+      display: inline-block;
+      font-family: var(--f-mono);
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--c-blue-mid);
+      border: 1px solid rgba(37,99,235,.3);
+      padding: 4px 14px;
+      border-radius: 100px;
+      margin-bottom: 14px;
+    }
+    .section-title {
+      font-family: var(--f-display);
+      font-size: clamp(1.9rem, 4.5vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: .02em;
+      color: var(--c-text);
+    }
+    .section-title span { color: var(--c-blue-mid); }
+    .section-subtitle {
+      font-size: 1rem;
+      color: var(--c-muted);
+      max-width: 520px;
+      margin: 10px auto 0;
+      line-height: 1.65;
+    }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--c-blue-mid); color: #fff;
+      font-weight: 700; font-size: .92rem;
+      padding: 14px 28px; border-radius: 100px;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .btn-primary:hover { background: var(--c-blue); transform: translateY(-2px); box-shadow: var(--shadow-blue); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: transparent; color: var(--c-blue-mid);
+      font-weight: 600; font-size: .92rem;
+      padding: 13px 28px; border-radius: 100px;
+      border: 2px solid var(--c-blue-mid);
+      transition: background var(--transition), color var(--transition), transform var(--transition);
+    }
+    .btn-secondary:hover { background: var(--c-blue-mid); color: #fff; transform: translateY(-2px); }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ══ NAVBAR ══ */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0 20px;
+      transition: background var(--transition), box-shadow var(--transition);
+    }
+    .navbar.scrolled {
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 var(--c-border);
+    }
+    .navbar__inner {
+      max-width: 1200px; margin: 0 auto;
+      height: 66px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .navbar__logo { display: flex; align-items: center; gap: 10px; }
+    .logo-img { height: 40px; width: auto; object-fit: contain; }
+    .logo-mark-fallback {
+      width: 40px; height: 40px; background: var(--c-blue-mid);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      font-family: var(--f-display); font-size: 1.2rem; color: #fff; flex-shrink: 0;
+    }
+    .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+    .logo-text strong { font-family: var(--f-display); font-size: 1.25rem; letter-spacing: .08em; color: var(--c-text); }
+    .logo-text span { font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; color: var(--c-muted); }
+    .navbar__nav { display: flex; align-items: center; gap: 28px; }
+    .navbar__nav a { font-size: .87rem; font-weight: 500; color: var(--c-muted); transition: color var(--transition); }
+    .navbar__nav a:hover { color: var(--c-blue-mid); }
+    .navbar__cta {
+      background: var(--c-blue-mid); color: #fff;
+      font-size: .84rem; font-weight: 600;
+      padding: 9px 20px; border-radius: 100px;
+      display: flex; align-items: center; gap: 7px;
+      transition: background var(--transition), transform var(--transition);
+    }
+    .navbar__cta:hover { background: var(--c-blue); transform: translateY(-1px); }
+    .navbar__hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; }
+    .navbar__hamburger span { display: block; width: 24px; height: 2px; background: var(--c-text); border-radius: 2px; }
+
+    /* MOBILE MENU */
+    .mobile-menu {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: rgba(255,255,255,.98); backdrop-filter: blur(20px);
+      flex-direction: column; align-items: center; justify-content: center; gap: 36px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: var(--f-display); font-size: 2rem; letter-spacing: .08em; color: var(--c-text); transition: color var(--transition); }
+    .mobile-menu a:hover { color: var(--c-blue-mid); }
+    .mobile-menu__close { position: absolute; top: 20px; right: 20px; font-size: 1.8rem; color: var(--c-muted); }
+
+    /* ══ HERO ══ */
+    .hero {
+      min-height: auto; display: flex; align-items: center;
+      position: relative; overflow: hidden;
+      background: linear-gradient(135deg, #0F172A 0%, #1E3A8A 60%, #1d4ed8 100%);
+    }
+    .hero__grid {
+      position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .hero__glow {
+      position: absolute; top: -20%; right: -10%;
+      width: 60vw; height: 60vw; border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,.25) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero__content {
+      position: relative; z-index: 1; width: 100%;
+      max-width: 1200px; margin: 0 auto;
+      padding: 96px 20px 56px;
+    }
+    .hero__badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+      border-radius: 100px; padding: 5px 14px 5px 6px; margin-bottom: 16px;
+    }
+    .hero__badge-dot {
+      width: 7px; height: 7px; background: #60a5fa; border-radius: 50%;
+      animation: pulse 2s ease infinite;
+    }
+    @keyframes pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(96,165,250,.5); } 50% { box-shadow: 0 0 0 6px rgba(96,165,250,0); } }
+    .hero__badge span { font-family: var(--f-mono); font-size: .68rem; letter-spacing: .14em; color: #bfdbfe; text-transform: uppercase; }
+    .hero__title {
+      font-family: var(--f-display);
+      font-size: clamp(2.2rem, 5.5vw, 4.2rem);
+      line-height: .98; letter-spacing: .02em; color: #fff;
+      margin-bottom: 14px; max-width: 700px;
+    }
+    .hero__title .accent { color: #60a5fa; }
+    .hero__title .outline { -webkit-text-stroke: 1px rgba(255,255,255,.35); color: transparent; }
+    .hero__sub { font-size: 1rem; color: #bfdbfe; max-width: 440px; line-height: 1.65; margin-bottom: 24px; }
+    .hero__sub strong { color: #fff; }
+    .hero__ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+    .hero__cta-primary {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: #fff; color: var(--c-blue);
+      font-weight: 700; font-size: .9rem;
+      padding: 12px 26px; border-radius: 100px;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .hero__cta-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,0,0,.2); }
+    .hero__cta-secondary {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: rgba(255,255,255,.12); color: #fff;
+      font-weight: 600; font-size: .9rem;
+      padding: 12px 26px; border-radius: 100px;
+      border: 1px solid rgba(255,255,255,.25);
+      transition: background var(--transition), transform var(--transition);
+    }
+    .hero__cta-secondary:hover { background: rgba(255,255,255,.2); transform: translateY(-2px); }
+    .hero__stats { display: flex; flex-wrap: wrap; gap: 0; border-top: 1px solid rgba(255,255,255,.12); padding-top: 24px; }
+    .hero__stat { padding-right: 28px; margin-right: 28px; border-right: 1px solid rgba(255,255,255,.12); }
+    .hero__stat:last-child { border-right: none; }
+    .hero__stat-num { font-family: var(--f-display); font-size: 2rem; color: #fff; line-height: 1; }
+    .hero__stat-num span { color: #60a5fa; }
+    .hero__stat-label { font-size: .72rem; color: #93c5fd; text-transform: uppercase; letter-spacing: .1em; margin-top: 2px; }
+
+    /* ══ TRUST BAR ══ */
+    .trust-bar {
+      background: var(--c-blue); padding: 14px 0; overflow: hidden;
+    }
+    .trust-bar__track {
+      display: flex; align-items: center; gap: 40px;
+      animation: marquee 30s linear infinite; width: max-content;
+    }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    .trust-bar__item { display: flex; align-items: center; gap: 9px; white-space: nowrap; flex-shrink: 0; }
+    .trust-bar__text { font-size: .8rem; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: #bfdbfe; }
+    .trust-bar__sep { width: 1px; height: 18px; background: rgba(255,255,255,.2); flex-shrink: 0; }
+
+    /* ══ SECTIONS BASE ══ */
+    .section-light { background: var(--c-bg); padding: 80px 0; }
+    .section-alt   { background: var(--c-bg-alt); padding: 80px 0; }
+    .section-dark  { background: var(--c-bg-dark); padding: 80px 0; }
+    .section-header { text-align: center; margin-bottom: 48px; }
+
+    /* ══ CATEGORIES ══ */
+    .categories__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+    .cat-card {
+      background: var(--c-card); border: 1px solid var(--c-border);
+      border-radius: var(--radius-lg); padding: 32px 24px 28px;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      display: block; position: relative; overflow: hidden;
+    }
+    .cat-card::after {
+      content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px; background: var(--c-blue-mid);
+      transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
+    }
+    .cat-card:hover { border-color: var(--c-blue-mid); transform: translateY(-5px); box-shadow: var(--shadow-card); }
+    .cat-card:hover::after { transform: scaleX(1); }
+    .cat-card__icon { font-size: 2rem; margin-bottom: 16px; display: block; }
+    .cat-card__title { font-family: var(--f-display); font-size: 1.4rem; letter-spacing: .05em; color: var(--c-text); margin-bottom: 8px; }
+    .cat-card__desc { font-size: .83rem; color: var(--c-muted); line-height: 1.55; margin-bottom: 16px; }
+    .cat-card__link { font-size: .8rem; font-weight: 600; color: var(--c-blue-mid); text-transform: uppercase; letter-spacing: .1em; display: inline-flex; align-items: center; gap: 5px; transition: gap var(--transition); }
+    .cat-card:hover .cat-card__link { gap: 9px; }
+
+    /* ══ PRODUCTS ══ */
+    .products__header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; flex-wrap: wrap; gap: 12px; }
+    .products__see-all { font-size: .85rem; font-weight: 600; color: var(--c-blue-mid); display: inline-flex; align-items: center; gap: 5px; text-transform: uppercase; letter-spacing: .1em; transition: gap var(--transition); }
+    .products__see-all:hover { gap: 9px; }
+    .products__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+    .prod-card {
+      background: var(--c-card); border: 1px solid var(--c-border);
+      border-radius: var(--radius-md); overflow: hidden;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .prod-card:hover { border-color: var(--c-blue-mid); transform: translateY(-4px); box-shadow: var(--shadow-card); }
+    .prod-card__img {
+      width: 100%; aspect-ratio: 1;
+      background: var(--c-bg-alt);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .prod-card__img img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+    .prod-card__img-placeholder { display: flex; flex-direction: column; align-items: center; gap: 6px; color: var(--c-muted); }
+    .prod-card__img-placeholder span { font-size: 2.2rem; opacity: .4; }
+    .prod-card__img-placeholder p { font-size: .65rem; letter-spacing: .1em; text-transform: uppercase; font-family: var(--f-mono); }
+    .prod-card__badge {
+      position: absolute; top: 10px; left: 10px;
+      background: var(--c-red); color: #fff;
+      font-size: .66rem; font-weight: 700;
+      padding: 3px 9px; border-radius: 100px;
+      text-transform: uppercase; letter-spacing: .08em;
+    }
+    .prod-card__body { padding: 18px; }
+    .prod-card__cat { font-family: var(--f-mono); font-size: .67rem; color: var(--c-blue-mid); text-transform: uppercase; letter-spacing: .12em; margin-bottom: 5px; }
+    .prod-card__name { font-weight: 600; font-size: .92rem; color: var(--c-text); margin-bottom: 6px; line-height: 1.3; }
+    .prod-card__desc { font-size: .79rem; color: var(--c-muted); line-height: 1.5; margin-bottom: 14px; }
+    .prod-card__cta {
+      width: 100%; background: var(--c-blue-lt); color: var(--c-blue-mid);
+      border: 1px solid rgba(37,99,235,.2); padding: 9px 14px;
+      border-radius: var(--radius-sm); font-size: .82rem; font-weight: 600;
+      display: flex; align-items: center; justify-content: center; gap: 7px;
+      transition: background var(--transition), color var(--transition);
+      text-decoration: none;
+    }
+    .prod-card__cta:hover { background: var(--c-blue-mid); color: #fff; }
+
+    /* ══ WHY US ══ */
+    .why__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .why__items { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .why-item {
+      background: var(--c-bg); border: 1px solid var(--c-border);
+      border-radius: var(--radius-md); padding: 24px 20px;
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .why-item:hover { border-color: var(--c-blue-mid); transform: translateY(-3px); box-shadow: var(--shadow-card); }
+    .why-item__icon { font-size: 1.6rem; margin-bottom: 12px; }
+    .why-item__title { font-weight: 700; font-size: .92rem; color: var(--c-text); margin-bottom: 5px; }
+    .why-item__desc { font-size: .8rem; color: var(--c-muted); line-height: 1.55; }
+
+    /* ══ GALLERY ══ */
+    .gallery__grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+    .gallery__item {
+      position: relative; border-radius: var(--radius-md); overflow: hidden;
+      aspect-ratio: 4/3; background: var(--c-bg-alt);
+      border: 1px solid var(--c-border); cursor: pointer;
+      display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .gallery__item:hover { transform: scale(1.02); box-shadow: var(--shadow-card); }
+    .gallery__item:first-child { grid-row: span 2; aspect-ratio: auto; }
+    .gallery__item img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .gallery__placeholder-icon { font-size: 2rem; opacity: .25; position: relative; z-index: 1; }
+    .gallery__placeholder-label { font-size: .68rem; font-family: var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--c-muted); position: relative; z-index: 1; }
+    .gallery__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(30,64,175,.85) 0%, transparent 55%);
+      opacity: 0; transition: opacity var(--transition);
+      display: flex; align-items: flex-end; padding: 18px;
+    }
+    .gallery__item:hover .gallery__overlay { opacity: 1; }
+    .gallery__label { font-weight: 600; font-size: .85rem; color: #fff; position: relative; z-index: 1; }
+
+    /* ══ TESTIMONIALS ══ */
+    .testimonials__grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
+    .testi-card {
+      background: var(--c-bg); border: 1px solid var(--c-border);
+      border-radius: var(--radius-lg); padding: 30px 26px;
+      position: relative; transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+    }
+    .testi-card:hover { border-color: var(--c-blue-mid); transform: translateY(-4px); box-shadow: var(--shadow-card); }
+    .testi-card__quote { font-size: 3rem; color: var(--c-blue-mid); font-family: Georgia,serif; line-height: .7; margin-bottom: 12px; }
+    .testi-card__stars { display: flex; gap: 2px; margin-bottom: 12px; }
+    .testi-card__stars span { color: #f59e0b; font-size: .95rem; }
+    .testi-card__text { font-size: .9rem; color: var(--c-muted); line-height: 1.65; margin-bottom: 20px; font-style: italic; }
+    .testi-card__author { display: flex; align-items: center; gap: 12px; }
+    .testi-card__avatar {
+      width: 46px; height: 46px; border-radius: 50%; overflow: hidden;
+      background: var(--c-blue-mid); display: flex; align-items: center; justify-content: center;
+      font-family: var(--f-display); font-size: 1.1rem; color: #fff; flex-shrink: 0;
+    }
+    .testi-card__avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .testi-card__name { font-weight: 600; font-size: .88rem; color: var(--c-text); }
+    .testi-card__badge { font-size: .72rem; color: var(--c-muted); margin-top: 2px; }
+    .testi-card__tag {
+      position: absolute; top: 18px; right: 18px;
+      background: var(--c-blue-lt); border: 1px solid rgba(37,99,235,.2);
+      border-radius: 100px; padding: 3px 10px;
+      font-size: .67rem; font-weight: 600; color: var(--c-blue-mid);
+      text-transform: uppercase; letter-spacing: .08em;
+    }
+
+    /* ══ BRANDS ══ */
+    .brands__grid {
+      display: flex; flex-wrap: wrap;
+      align-items: center; justify-content: center;
+      gap: 32px; margin-top: 8px;
+    }
+    .brand-item {
+      display: flex; align-items: center; justify-content: center;
+      padding: 16px 24px;
+      background: var(--c-bg); border: 1px solid var(--c-border);
+      border-radius: var(--radius-md);
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      min-width: 130px;
+    }
+    .brand-item:hover { border-color: var(--c-blue-mid); transform: translateY(-3px); box-shadow: var(--shadow-card); }
+    .brand-item img { height: 48px; width: auto; max-width: 120px; object-fit: contain; }
+    .brand-item__name { font-family: var(--f-display); font-size: 1.3rem; letter-spacing: .08em; color: var(--c-muted); }
+
+    /* ══ INSTAGRAM ══ */
+    .instagram__grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 8px; margin-bottom: 32px; }
+    .ig-item {
+      aspect-ratio: 1; background: var(--c-bg-alt); border-radius: var(--radius-sm);
+      border: 1px solid var(--c-border);
+      display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 5px;
+      cursor: pointer; overflow: hidden; position: relative;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+    .ig-item:hover { border-color: var(--c-blue-mid); transform: scale(1.04); }
+    .ig-item__icon { font-size: 1.4rem; opacity: .3; }
+    .ig-item__label { font-size: .6rem; font-family: var(--f-mono); letter-spacing: .1em; text-transform: uppercase; color: var(--c-muted); }
+    .ig-item__overlay {
+      position: absolute; inset: 0; background: rgba(30,64,175,.8);
+      opacity: 0; transition: opacity var(--transition);
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-size: 1.4rem;
+    }
+    .ig-item:hover .ig-item__overlay { opacity: 1; }
+
+    /* ══ CONTACT ══ */
+    .contact__inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .contact__details { display: flex; flex-direction: column; gap: 18px; margin: 28px 0; }
+    .contact__detail { display: flex; align-items: flex-start; gap: 14px; }
+    .contact__detail-icon {
+      width: 42px; height: 42px;
+      background: var(--c-blue-lt); border: 1px solid rgba(37,99,235,.2);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; flex-shrink: 0;
+    }
+    .contact__detail-label { font-size: .7rem; font-family: var(--f-mono); color: var(--c-blue-mid); text-transform: uppercase; letter-spacing: .1em; margin-bottom: 2px; }
+    .contact__detail-value { font-size: .93rem; color: var(--c-text); font-weight: 500; }
+    .contact__detail-sub { font-size: .79rem; color: var(--c-muted); margin-top: 1px; }
+    .contact__wa-btn {
+      display: inline-flex; align-items: center; gap: 11px;
+      background: var(--c-wa); color: #fff;
+      font-weight: 700; font-size: .95rem;
+      padding: 16px 32px; border-radius: 100px;
+      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+      box-shadow: 0 4px 20px rgba(37,211,102,.25);
+    }
+    .contact__wa-btn:hover { background: var(--c-wa-dark); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,.35); }
+    .contact__map { border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--c-border); }
+    .contact__map iframe { width: 100%; height: 400px; display: block; border: none; }
+
+    /* ══ FOOTER ══ */
+    .footer { background: var(--c-bg-dark); padding: 60px 0 28px; }
+    .footer__grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 44px; margin-bottom: 48px; }
+    .footer__brand-logo { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; }
+    .footer__brand-logo .logo-mark-fallback { background: var(--c-blue-mid); }
+    .footer__brand-logo .logo-text strong { color: #fff; }
+    .footer__brand-logo .logo-text span { color: #64748b; }
+    .footer__brand-desc { font-size: .83rem; color: #64748b; line-height: 1.65; margin-bottom: 22px; }
+    .footer__socials { display: flex; gap: 10px; }
+    .footer__social {
+      width: 38px; height: 38px;
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center; font-size: .95rem;
+      transition: background var(--transition), border-color var(--transition);
+    }
+    .footer__social:hover { background: var(--c-blue-mid); border-color: var(--c-blue-mid); }
+    .footer__col-title { font-family: var(--f-display); font-size: 1.05rem; letter-spacing: .08em; color: #fff; margin-bottom: 18px; }
+    .footer__links { display: flex; flex-direction: column; gap: 9px; }
+    .footer__links a { font-size: .83rem; color: #64748b; transition: color var(--transition); }
+    .footer__links a:hover { color: #bfdbfe; }
+    .footer__bottom {
+      border-top: 1px solid rgba(255,255,255,.08); padding-top: 24px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+    }
+    .footer__copy { font-size: .78rem; color: #475569; }
+    .footer__copy span { color: var(--c-blue-mid); }
+    .footer__payments { display: flex; align-items: center; gap: 6px; }
+    .footer__payments span {
+      background: rgba(255,255,255,.06); border: 1px solid rgba(255,255,255,.08);
+      padding: 3px 9px; border-radius: 4px;
+      font-family: var(--f-mono); font-size: .7rem; color: #64748b;
+    }
+
+    /* ══ WHATSAPP FLOTANTE ══ */
+    .wa-float { position: fixed; bottom: 24px; right: 24px; z-index: 998; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+    .wa-float__tooltip {
+      background: #fff; border: 1px solid var(--c-border);
+      border-radius: var(--radius-md); padding: 11px 15px; max-width: 210px;
+      box-shadow: var(--shadow-card); display: none;
+    }
+    .wa-float:hover .wa-float__tooltip { display: block; }
+    .wa-float__tooltip strong { color: var(--c-text); font-size: .83rem; display: block; margin-bottom: 3px; }
+    .wa-float__tooltip p { font-size: .79rem; color: var(--c-muted); }
+    .wa-float__btn-wrap { position: relative; }
+    .wa-float__btn {
+      width: 58px; height: 58px; background: var(--c-wa);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      text-decoration: none;
+      box-shadow: 0 4px 18px rgba(37,211,102,.35);
+      animation: waPulse 3.5s ease infinite;
+      transition: background var(--transition), transform var(--transition);
+    }
+    @keyframes waPulse { 0%,100% { box-shadow: 0 4px 18px rgba(37,211,102,.35); } 50% { box-shadow: 0 4px 28px rgba(37,211,102,.6); } }
+    .wa-float__btn:hover { background: var(--c-wa-dark); transform: scale(1.08); animation: none; }
+    .wa-float__dot {
+      position: absolute; top: 2px; right: 2px;
+      width: 13px; height: 13px; background: #fff; border-radius: 50%;
+      border: 2px solid var(--c-wa);
+    }
+
+    /* ══ RESPONSIVE ══ */
+    @media (max-width: 1024px) {
+      .categories__grid  { grid-template-columns: repeat(2,1fr); }
+      .products__grid    { grid-template-columns: repeat(2,1fr); }
+      .testimonials__grid { grid-template-columns: 1fr 1fr; }
+      .instagram__grid   { grid-template-columns: repeat(3,1fr); }
+      .footer__grid      { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .why__inner        { grid-template-columns: 1fr; gap: 40px; }
+      .contact__inner    { grid-template-columns: 1fr; gap: 36px; }
+    }
+
+    @media (max-width: 768px) {
+      /* Navbar */
+      .navbar__nav, .navbar__cta { display: none; }
+      .navbar__hamburger { display: flex; }
+
+      /* Sections padding */
+      .section-light, .section-alt, .section-dark { padding: 56px 0; }
+      .section-header { margin-bottom: 32px; }
+
+      /* Hero */
+      .hero__content { padding: 76px 20px 40px; }
+      .hero__title { font-size: clamp(1.9rem, 8vw, 2.8rem); }
+      .hero__sub { font-size: .92rem; }
+      .hero__ctas { flex-direction: column; }
+      .hero__cta-primary, .hero__cta-secondary { justify-content: center; width: 100%; }
+      .hero__stats { gap: 0; flex-wrap: nowrap; overflow-x: auto; }
+      .hero__stat { padding-right: 18px; margin-right: 18px; flex-shrink: 0; }
+      .hero__stat-num { font-size: 1.6rem; }
+
+      /* Grids */
+      .categories__grid  { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .products__grid    { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .why__items        { grid-template-columns: 1fr 1fr; gap: 12px; }
+      .gallery__grid     { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .gallery__item:first-child { grid-row: span 1; aspect-ratio: 4/3; }
+      .testimonials__grid { grid-template-columns: 1fr; }
+      .instagram__grid   { grid-template-columns: repeat(3,1fr); }
+      .footer__grid      { grid-template-columns: 1fr; gap: 28px; }
+      .footer__bottom    { flex-direction: column; text-align: center; }
+
+      /* Cards compact */
+      .cat-card { padding: 24px 18px 20px; }
+      .cat-card__icon { font-size: 1.6rem; margin-bottom: 10px; }
+      .cat-card__title { font-size: 1.15rem; }
+      .cat-card__desc { display: none; }
+
+      .prod-card__body { padding: 14px; }
+      .prod-card__desc { display: none; }
+
+      .why-item { padding: 18px 14px; }
+
+      /* Brands */
+      .brands__grid { gap: 16px; }
+      .brand-item { min-width: 100px; padding: 12px 18px; }
+      .brand-item img { height: 36px; }
+
+      /* Contact */
+      .contact__map iframe { height: 280px; }
+      .section-subtitle { font-size: .9rem; }
+    }
+
+    @media (max-width: 480px) {
+      .categories__grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .products__grid   { grid-template-columns: 1fr 1fr; gap: 10px; }
+      .why__items       { grid-template-columns: 1fr; }
+      .gallery__grid    { grid-template-columns: 1fr 1fr; }
+      .instagram__grid  { grid-template-columns: repeat(3,1fr); }
+      .hero__stat { padding-right: 18px; margin-right: 18px; }
+      .hero__stat-num { font-size: 1.7rem; }
+      .hero__stat-label { font-size: .65rem; }
+      .brands__grid { gap: 10px; }
+      .brand-item { min-width: 90px; padding: 10px 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ NAVBAR ══ -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="/" class="navbar__logo">
+        <img src="assets/logo autopartes m3.png" alt="Autopartes M3" class="logo-img"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+        <div class="logo-mark-fallback" style="display:none;">M3</div>
+        <div class="logo-text">
+          <strong>AUTOPARTES</strong>
+          <span>M3 — Munro, Buenos Aires</span>
+        </div>
+      </a>
+      <ul class="navbar__nav">
+        <li><a href="#categorias">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#testimonios">Reseñas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="https://wa.me/5491151266597?text=Hola%2C%20vi%20su%20sitio%20web%20y%20quiero%20consultar%20un%20producto." class="navbar__cta" target="_blank" rel="noopener">
+        💬 WhatsApp
+      </a>
+      <button class="navbar__hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu__close" id="mobileClose">✕</button>
+    <a href="#categorias" class="mobile-link">Productos</a>
+    <a href="#nosotros" class="mobile-link">Nosotros</a>
+    <a href="#testimonios" class="mobile-link">Reseñas</a>
+    <a href="#contacto" class="mobile-link">Contacto</a>
+    <a href="https://wa.me/5491151266597" target="_blank" rel="noopener">💬 WhatsApp</a>
+  </div>
+
+  <main>
+    <!-- ══ HERO ══ -->
+    <section class="hero" id="inicio">
+      <div class="hero__grid"></div>
+      <div class="hero__glow"></div>
+      <div class="hero__content">
+        <div class="hero__badge">
+          <div class="hero__badge-dot"></div>
+          <span>Munro · Zona Norte · Abierto Lun–Vie 8–18hs</span>
+        </div>
+        <h1 class="hero__title">
+          Equipamos tu auto<br/>
+          <span class="accent">como si fuera</span><br/>
+          <span class="outline">nuestro.</span>
+        </h1>
+        <p class="hero__sub">
+          Accesorios, repuestos e <strong>instalación profesional</strong> en Munro.<br/>
+          Asesoramiento real de gente que vive el mundo del motor.
+        </p>
+        <div class="hero__ctas">
+          <a href="https://wa.me/5491151266597?text=Hola%2C%20vi%20el%20sitio%20web%20y%20quiero%20un%20asesoramiento%20gratis%20para%20mi%20auto." class="hero__cta-primary" target="_blank" rel="noopener">
+            💬 Pedí tu asesoramiento gratis
+          </a>
+          <a href="https://www.google.com/maps/place/Autopartes+M3/@-34.5194729,-58.5269934,17z/" class="hero__cta-secondary" target="_blank" rel="noopener">
+            📍 Visitá el local en Munro
+          </a>
+        </div>
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <div class="hero__stat-num">10<span>+</span></div>
+            <div class="hero__stat-label">Años de trayectoria</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-num">500<span>+</span></div>
+            <div class="hero__stat-label">Autos equipados</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-num">4.9<span>★</span></div>
+            <div class="hero__stat-label">Google Reviews</div>
+          </div>
+          <div class="hero__stat">
+            <div class="hero__stat-num">0<span>$</span></div>
+            <div class="hero__stat-label">Asesoramiento sin cargo</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ TRUST BAR ══ -->
+    <div class="trust-bar">
+      <div class="trust-bar__track">
+        <div class="trust-bar__item"><span>⭐</span><span class="trust-bar__text">+100 Reseñas Google 4.9★</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>🛡️</span><span class="trust-bar__text">Garantía en todos los productos</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>🔧</span><span class="trust-bar__text">Instalación profesional</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>💳</span><span class="trust-bar__text">Efectivo · Transferencia · Tarjetas</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>📦</span><span class="trust-bar__text">Envíos a todo el país</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>🚗</span><span class="trust-bar__text">+500 autos equipados</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>📍</span><span class="trust-bar__text">Av. Mitre 3495, Munro</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>⏰</span><span class="trust-bar__text">Lun–Vie 8 a 18hs · Sáb 9 a 13hs</span></div>
+        <div class="trust-bar__sep"></div>
+        <!-- repeat for loop -->
+        <div class="trust-bar__item"><span>⭐</span><span class="trust-bar__text">+100 Reseñas Google 4.9★</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>🛡️</span><span class="trust-bar__text">Garantía en todos los productos</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>🔧</span><span class="trust-bar__text">Instalación profesional</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>💳</span><span class="trust-bar__text">Efectivo · Transferencia · Tarjetas</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>📦</span><span class="trust-bar__text">Envíos a todo el país</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>🚗</span><span class="trust-bar__text">+500 autos equipados</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>📍</span><span class="trust-bar__text">Av. Mitre 3495, Munro</span></div>
+        <div class="trust-bar__sep"></div>
+        <div class="trust-bar__item"><span>⏰</span><span class="trust-bar__text">Lun–Vie 8 a 18hs · Sáb 9 a 13hs</span></div>
+      </div>
+    </div>
+
+    <!-- ══ CATEGORIES ══ -->
+    <section class="section-light" id="categorias">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">Nuestros productos</div>
+          <h2 class="section-title">Todo lo que tu auto <span>necesita</span></h2>
+          <p class="section-subtitle">Desde accesorios para darle estilo hasta repuestos para mantenerlo en perfectas condiciones.</p>
+        </div>
+        <div class="categories__grid">
+          <a href="#categorias" class="cat-card reveal">
+            <span class="cat-card__icon">🪑</span>
+            <h3 class="cat-card__title">Interior</h3>
+            <p class="cat-card__desc">Fundas a medida, cubre volantes, alfombras termoformadas y accesorios para personalizar el habitáculo de tu auto.</p>
+            <span class="cat-card__link">Ver productos →</span>
+          </a>
+          <a href="#categorias" class="cat-card reveal">
+            <span class="cat-card__icon">💡</span>
+            <h3 class="cat-card__title">Exterior</h3>
+            <p class="cat-card__desc">Ópticas, paragolpes, guardabarros, capots, cubreautos y todo para mejorar el exterior de tu vehículo.</p>
+            <span class="cat-card__link">Ver productos →</span>
+          </a>
+          <a href="#categorias" class="cat-card reveal">
+            <span class="cat-card__icon">⚙️</span>
+            <h3 class="cat-card__title">Repuestos</h3>
+            <p class="cat-card__desc">Filtros, lubricantes, baterías, sensores de estacionamiento, escobillas y repuestos de las mejores marcas.</p>
+            <span class="cat-card__link">Ver productos →</span>
+          </a>
+          <a href="#categorias" class="cat-card reveal">
+            <span class="cat-card__icon">✨</span>
+            <h3 class="cat-card__title">Cuidado</h3>
+            <p class="cat-card__desc">Ceras, pulidos, limpiadores, ambientadores y protectores para mantener tu auto impecable.</p>
+            <span class="cat-card__link">Ver productos →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ PRODUCTS ══ -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="products__header reveal">
+          <div>
+            <div class="section-tag">Lo más consultado</div>
+            <h2 class="section-title">Productos <span>destacados</span></h2>
+          </div>
+          <a href="https://wa.me/5491151266597?text=Hola%2C%20quiero%20ver%20el%20catálogo%20completo%20de%20productos." target="_blank" rel="noopener" class="products__see-all">
+            Ver catálogo completo →
+          </a>
+        </div>
+        <div class="products__grid">
+
+          <article class="prod-card reveal">
+            <div class="prod-card__img">
+              <!-- Reemplazar con: <img src="assets/fotos local m3/fundas.jpg" alt="Fundas a medida símil cuero" /> -->
+              <div class="prod-card__img-placeholder"><span>🪑</span><p>Foto del producto</p></div>
+              <span class="prod-card__badge">⚡ Más vendido</span>
+            </div>
+            <div class="prod-card__body">
+              <div class="prod-card__cat">Interior</div>
+              <h3 class="prod-card__name">Fundas a medida — Símil cuero premium</h3>
+              <p class="prod-card__desc">Confeccionadas especialmente para tu modelo. Ajuste perfecto, fácil instalación, resistentes al agua.</p>
+              <a href="https://wa.me/5491151266597?text=Hola%2C%20me%20interesan%20las%20fundas%20de%20símil%20cuero.%20¿Tienen%20para%20mi%20auto?" class="prod-card__cta" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+            </div>
+          </article>
+
+          <article class="prod-card reveal">
+            <div class="prod-card__img">
+              <!-- <img src="assets/fotos local m3/alfombras.jpg" alt="Alfombras termoformadas" /> -->
+              <div class="prod-card__img-placeholder"><span>🏎️</span><p>Foto del producto</p></div>
+              <span class="prod-card__badge">🔥 Novedad</span>
+            </div>
+            <div class="prod-card__body">
+              <div class="prod-card__cat">Interior</div>
+              <h3 class="prod-card__name">Alfombras termoformadas</h3>
+              <p class="prod-card__desc">Moldadas al piso de tu auto, 100% impermeables. Protección total con estética premium.</p>
+              <a href="https://wa.me/5491151266597?text=Hola%2C%20me%20interesan%20las%20alfombras%20termoformadas.%20¿Las%20tienen%20para%20mi%20modelo?" class="prod-card__cta" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+            </div>
+          </article>
+
+          <article class="prod-card reveal">
+            <div class="prod-card__img">
+              <!-- <img src="assets/fotos local m3/cobertor.jpg" alt="Cobertor antigranizo" /> -->
+              <div class="prod-card__img-placeholder"><span>🌧️</span><p>Foto del producto</p></div>
+            </div>
+            <div class="prod-card__body">
+              <div class="prod-card__cat">Exterior</div>
+              <h3 class="prod-card__name">Cobertor antigranizo</h3>
+              <p class="prod-card__desc">Protección total contra granizo, lluvia ácida y rayos UV. Disponible para todos los modelos.</p>
+              <a href="https://wa.me/5491151266597?text=Hola%2C%20quiero%20consultar%20por%20el%20cobertor%20antigranizo%20para%20mi%20auto." class="prod-card__cta" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+            </div>
+          </article>
+
+          <article class="prod-card reveal">
+            <div class="prod-card__img">
+              <!-- <img src="assets/fotos local m3/sensores.jpg" alt="Sensores de estacionamiento" /> -->
+              <div class="prod-card__img-placeholder"><span>🔊</span><p>Foto del producto</p></div>
+            </div>
+            <div class="prod-card__body">
+              <div class="prod-card__cat">Exterior</div>
+              <h3 class="prod-card__name">Sensores de estacionamiento</h3>
+              <p class="prod-card__desc">Instalación incluida. Sistemas de 4 y 8 sensores con pantalla y sonido.</p>
+              <a href="https://wa.me/5491151266597?text=Hola%2C%20quiero%20saber%20más%20sobre%20los%20sensores%20de%20estacionamiento." class="prod-card__cta" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+            </div>
+          </article>
+
+          <article class="prod-card reveal">
+            <div class="prod-card__img">
+              <!-- <img src="assets/fotos local m3/volante.jpg" alt="Cubre volante ergonómico" /> -->
+              <div class="prod-card__img-placeholder"><span>🎯</span><p>Foto del producto</p></div>
+            </div>
+            <div class="prod-card__body">
+              <div class="prod-card__cat">Interior</div>
+              <h3 class="prod-card__name">Cubre volante ergonómico</h3>
+              <p class="prod-card__desc">Varios materiales y colores. Antideslizante, fácil colocación, mejora el agarre.</p>
+              <a href="https://wa.me/5491151266597?text=Hola%2C%20me%20interesa%20un%20cubre%20volante.%20¿Qué%20modelos%20tienen?" class="prod-card__cta" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+            </div>
+          </article>
+
+          <article class="prod-card reveal">
+            <div class="prod-card__img">
+              <!-- <img src="assets/fotos local m3/opticas.jpg" alt="Ópticas y faros LED" /> -->
+              <div class="prod-card__img-placeholder"><span>💡</span><p>Foto del producto</p></div>
+              <span class="prod-card__badge">🎁 Stock limitado</span>
+            </div>
+            <div class="prod-card__body">
+              <div class="prod-card__cat">Exterior</div>
+              <h3 class="prod-card__name">Ópticas y faros LED</h3>
+              <p class="prod-card__desc">Mayor visibilidad nocturna y estética moderna. Compatible con los modelos más populares.</p>
+              <a href="https://wa.me/5491151266597?text=Hola%2C%20quiero%20consultar%20por%20ópticas%20LED%20para%20mi%20auto." class="prod-card__cta" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+            </div>
+          </article>
+
+          <article class="prod-card reveal">
+            <div class="prod-card__img">
+              <!-- <img src="assets/fotos local m3/baterias.jpg" alt="Baterías principales marcas" /> -->
+              <div class="prod-card__img-placeholder"><span>🔋</span><p>Foto del producto</p></div>
+            </div>
+            <div class="prod-card__body">
+              <div class="prod-card__cat">Repuestos</div>
+              <h3 class="prod-card__name">Baterías — Principales marcas</h3>
+              <p class="prod-card__desc">Vidal, Bosch, Remy y más. Entrega e instalación incluida. Garantía oficial de fábrica.</p>
+              <a href="https://wa.me/5491151266597?text=Hola%2C%20necesito%20una%20batería.%20¿Tienen%20para%20mi%20auto?" class="prod-card__cta" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+            </div>
+          </article>
+
+          <article class="prod-card reveal">
+            <div class="prod-card__img">
+              <!-- <img src="assets/fotos local m3/detailing.jpg" alt="Kit de limpieza y detailing" /> -->
+              <div class="prod-card__img-placeholder"><span>✨</span><p>Foto del producto</p></div>
+            </div>
+            <div class="prod-card__body">
+              <div class="prod-card__cat">Cuidado</div>
+              <h3 class="prod-card__name">Kit de limpieza y detailing</h3>
+              <p class="prod-card__desc">Ceras, shampoo, microfibra y productos premium para mantener tu auto impecable.</p>
+              <a href="https://wa.me/5491151266597?text=Hola%2C%20me%20interesa%20el%20kit%20de%20detailing.%20¿Cuáles%20tienen%20disponibles?" class="prod-card__cta" target="_blank" rel="noopener">💬 Consultar por WhatsApp</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ WHY US ══ -->
+    <section class="section-light" id="nosotros">
+      <div class="container">
+        <div class="why__inner">
+          <div class="reveal">
+            <div class="section-tag">Por qué elegirnos</div>
+            <h2 class="section-title">10 años <span>haciendo</span> que tu auto se sienta nuevo.</h2>
+            <p style="color:var(--c-muted);font-size:.95rem;line-height:1.7;max-width:460px;margin-top:14px;">
+              Llevamos una década haciendo una sola cosa: entender de autos. Cada funda, cada repuesto y cada accesorio que vendemos lo conocemos de verdad. Por eso nuestros clientes vuelven — y traen a sus amigos.
+            </p>
+            <p style="color:var(--c-muted);font-size:.95rem;line-height:1.7;max-width:460px;margin-top:12px;">
+              No vendemos por vender. Te preguntamos qué auto tenés, cómo lo usás, y recién ahí te recomendamos.
+            </p>
+            <a href="https://wa.me/5491151266597?text=Hola%2C%20quiero%20un%20asesoramiento%20para%20mi%20auto." class="btn-primary" target="_blank" rel="noopener" style="margin-top:24px;display:inline-flex;">
+              🚗 Hablá con un especialista
+            </a>
+          </div>
+          <div class="why__items">
+            <div class="why-item reveal">
+              <div class="why-item__icon">🏆</div>
+              <div class="why-item__title">10 años de trayectoria</div>
+              <div class="why-item__desc">Una década atendiendo clientes en Munro y zona norte.</div>
+            </div>
+            <div class="why-item reveal">
+              <div class="why-item__icon">🎯</div>
+              <div class="why-item__title">Asesoramiento real</div>
+              <div class="why-item__desc">Te orientamos sin apuro. Solo la solución que necesitás.</div>
+            </div>
+            <div class="why-item reveal">
+              <div class="why-item__icon">🔧</div>
+              <div class="why-item__title">Instalación incluida</div>
+              <div class="why-item__desc">Comprás y te lo instalamos en el día. Sin esperas.</div>
+            </div>
+            <div class="why-item reveal">
+              <div class="why-item__icon">🛡️</div>
+              <div class="why-item__title">Garantía de calidad</div>
+              <div class="why-item__desc">Si algo no funciona como debe, lo cambiamos. Sin vueltas.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ GALLERY ══ -->
+    <section class="section-alt" id="galeria">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">Trabajos realizados</div>
+          <h2 class="section-title">Lo que hacemos <span>habla</span> solo.</h2>
+          <p class="section-subtitle">Instalaciones reales en clientes reales. Cada foto es un auto que salió mejor de lo que entró.</p>
+        </div>
+        <div class="gallery__grid">
+          <!--
+            INSTRUCCIÓN: Reemplazar placeholders con imágenes reales así:
+            <div class="gallery__item reveal">
+              <img src="assets/fotos local m3/foto1.jpg" alt="Descripción del trabajo" />
+              <div class="gallery__overlay"><span class="gallery__label">Descripción</span></div>
+            </div>
+          -->
+          <div class="gallery__item reveal">
+            <span class="gallery__placeholder-icon">📸</span>
+            <span class="gallery__placeholder-label">Foto del local / exterior</span>
+            <div class="gallery__overlay"><span class="gallery__label">Fachada — Av. Mitre 3495, Munro</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <span class="gallery__placeholder-icon">🪑</span>
+            <span class="gallery__placeholder-label">Instalación fundas</span>
+            <div class="gallery__overlay"><span class="gallery__label">Fundas símil cuero — Toyota Corolla</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <span class="gallery__placeholder-icon">🏎️</span>
+            <span class="gallery__placeholder-label">Alfombras termoformadas</span>
+            <div class="gallery__overlay"><span class="gallery__label">Alfombras — VW Gol</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <span class="gallery__placeholder-icon">💡</span>
+            <span class="gallery__placeholder-label">Instalación ópticas</span>
+            <div class="gallery__overlay"><span class="gallery__label">Ópticas LED — Ford EcoSport</span></div>
+          </div>
+          <div class="gallery__item reveal">
+            <span class="gallery__placeholder-icon">🌧️</span>
+            <span class="gallery__placeholder-label">Cobertor antigranizo</span>
+            <div class="gallery__overlay"><span class="gallery__label">Cobertor antigranizo — Fiat Cronos</span></div>
+          </div>
+        </div>
+        <div class="text-center reveal" style="margin-top:32px;">
+          <a href="https://www.instagram.com/autopartesm3" target="_blank" rel="noopener" class="btn-secondary">
+            📷 Ver más trabajos en Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ TESTIMONIALS ══ -->
+    <section class="section-light" id="testimonios">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">Lo que dicen nuestros clientes</div>
+          <h2 class="section-title">Más de <span>100 reseñas</span> en Google</h2>
+          <p class="section-subtitle">Promedio de 4.9 estrellas. No porque lo decimos nosotros, sino porque lo dicen ellos.</p>
+        </div>
+        <div class="testimonials__grid">
+
+          <article class="testi-card reveal">
+            <span class="testi-card__tag">Buenos precios</span>
+            <div class="testi-card__quote">"</div>
+            <div class="testi-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testi-card__text">Excelente atención y buenos precios en efectivo, tienen de todo — hasta cobertores antigranizo de auto! Muy recomendable.</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">E</div>
+              <div>
+                <div class="testi-card__name">Ezequiel "el colo"</div>
+                <div class="testi-card__badge">⭐ Reseña de Google</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card reveal">
+            <span class="testi-card__tag">Productos de calidad</span>
+            <div class="testi-card__quote">"</div>
+            <div class="testi-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testi-card__text">Siempre acudo a comprarles todo lo referido a mi auto. El dueño y sus compañeros siempre me dieron una mano. ¡Los recomiendo!</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">G</div>
+              <div>
+                <div class="testi-card__name">Gonzalo Javier Alonso</div>
+                <div class="testi-card__badge">⭐ Reseña de Google</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card reveal">
+            <span class="testi-card__tag">Muy profesionales</span>
+            <div class="testi-card__quote">"</div>
+            <div class="testi-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testi-card__text">Prolijidad, puntualidad, buen precio, excelente trato. 6 estrellas les pondría. Me vendieron y colocaron fundas de símil cuero para un Corolla, impecables.</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">G</div>
+              <div>
+                <div class="testi-card__name">Guillermo Rudolph</div>
+                <div class="testi-card__badge">⭐ Reseña de Google</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="testi-card reveal">
+            <span class="testi-card__tag">Atención de primera</span>
+            <div class="testi-card__quote">"</div>
+            <div class="testi-card__stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <p class="testi-card__text">Increíble la atención y la calidad de los productos. Fui por unas alfombras termoformadas y quedaron perfectas. Sin duda volvería y lo recomendaría a todos.</p>
+            <div class="testi-card__author">
+              <div class="testi-card__avatar">
+                <!-- <img src="assets/martin-vassaro.jpg" alt="Martin Vassaro" /> -->
+                M
+              </div>
+              <div>
+                <div class="testi-card__name">Martín Vassaro</div>
+                <div class="testi-card__badge">⭐ Reseña de Google</div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+        <div class="text-center reveal" style="margin-top:40px;">
+          <a href="https://www.google.com/maps/place/Autopartes+M3/@-34.5194729,-58.5269934,17z/" target="_blank" rel="noopener" class="btn-secondary">
+            ⭐ Ver todas las reseñas en Google
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ BRANDS ══ -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">Marcas de confianza</div>
+          <h2 class="section-title">Trabajamos con las <span>mejores marcas</span></h2>
+          <p class="section-subtitle">Trabajamos con las mejores marcas del mercado automotriz para garantizar la calidad de cada producto que ofrecemos.</p>
+        </div>
+        <div class="brands__grid reveal">
+          <!--
+            INSTRUCCIÓN: Reemplazar cada .brand-item__name con una imagen:
+            <div class="brand-item">
+              <img src="assets/marcas/supercar.png" alt="Supercar" />
+            </div>
+            Por ahora se muestran los nombres como fallback.
+          -->
+          <div class="brand-item">
+            <img src="assets/marcas/supercar.png" alt="Supercar Autopartes"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="brand-item__name" style="display:none;">SUPERCAR</span>
+          </div>
+          <div class="brand-item">
+            <img src="assets/marcas/dm.png" alt="DM Autopartes"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="brand-item__name" style="display:none;">DM</span>
+          </div>
+          <div class="brand-item">
+            <img src="assets/marcas/mc-racing.png" alt="MC Racing"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="brand-item__name" style="display:none;">MC RACING</span>
+          </div>
+          <div class="brand-item">
+            <img src="assets/marcas/vidal.png" alt="Vidal Baterías"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="brand-item__name" style="display:none;">VIDAL</span>
+          </div>
+          <div class="brand-item">
+            <img src="assets/marcas/bracco.png" alt="Bracco"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="brand-item__name" style="display:none;">BRACCO</span>
+          </div>
+          <div class="brand-item">
+            <img src="assets/marcas/cromosol.png" alt="Cromosol"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='block';" />
+            <span class="brand-item__name" style="display:none;">CROMOSOL</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ INSTAGRAM ══ -->
+    <section class="section-light">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">Seguinos en Instagram</div>
+          <h2 class="section-title">Novedades, instalaciones <span>y más</span></h2>
+          <p class="section-subtitle">Mirá los últimos productos, trabajos terminados y promos exclusivas en nuestro Instagram.</p>
+          <a href="https://www.instagram.com/autopartesm3" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:7px;font-family:var(--f-mono);font-size:.85rem;color:var(--c-blue-mid);margin-top:8px;">
+            📷 @autopartesm3
+          </a>
+        </div>
+        <div class="instagram__grid reveal">
+          <a href="https://www.instagram.com/autopartesm3" target="_blank" rel="noopener" class="ig-item"><span class="ig-item__icon">📸</span><span class="ig-item__label">Post IG</span><div class="ig-item__overlay">▶</div></a>
+          <a href="https://www.instagram.com/autopartesm3" target="_blank" rel="noopener" class="ig-item"><span class="ig-item__icon">🪑</span><span class="ig-item__label">Fundas</span><div class="ig-item__overlay">▶</div></a>
+          <a href="https://www.instagram.com/autopartesm3" target="_blank" rel="noopener" class="ig-item"><span class="ig-item__icon">💡</span><span class="ig-item__label">Ópticas</span><div class="ig-item__overlay">▶</div></a>
+          <a href="https://www.instagram.com/autopartesm3" target="_blank" rel="noopener" class="ig-item"><span class="ig-item__icon">🏎️</span><span class="ig-item__label">Promo</span><div class="ig-item__overlay">▶</div></a>
+          <a href="https://www.instagram.com/autopartesm3" target="_blank" rel="noopener" class="ig-item"><span class="ig-item__icon">⚙️</span><span class="ig-item__label">Repuesto</span><div class="ig-item__overlay">▶</div></a>
+          <a href="https://www.instagram.com/autopartesm3" target="_blank" rel="noopener" class="ig-item"><span class="ig-item__icon">✨</span><span class="ig-item__label">Detailing</span><div class="ig-item__overlay">▶</div></a>
+        </div>
+        <div class="text-center reveal">
+          <a href="https://www.instagram.com/autopartesm3" target="_blank" rel="noopener" class="btn-primary">📷 Seguinos en Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══ CONTACT ══ -->
+    <section class="section-alt" id="contacto">
+      <div class="container">
+        <div class="contact__inner">
+          <div class="reveal">
+            <div class="section-tag">Encontranos</div>
+            <h2 class="section-title">Estamos <span>para ayudarte</span></h2>
+            <p style="color:var(--c-muted);font-size:.93rem;line-height:1.65;max-width:420px;margin-top:10px;">
+              Mandanos una foto de tu auto por WhatsApp y te decimos qué le falta. Atención rápida, personalizada y sin compromiso.
+            </p>
+            <div class="contact__details">
+              <div class="contact__detail">
+                <div class="contact__detail-icon">📍</div>
+                <div>
+                  <div class="contact__detail-label">Dirección</div>
+                  <div class="contact__detail-value">
+                    <a href="https://www.google.com/maps/place/Autopartes+M3/@-34.5194729,-58.5269934,17z/" target="_blank" rel="noopener" style="color:var(--c-blue-mid);">Av. Bartolomé Mitre 3495, Munro</a>
+                  </div>
+                  <div class="contact__detail-sub">Vicente López, Buenos Aires</div>
+                </div>
+              </div>
+              <div class="contact__detail">
+                <div class="contact__detail-icon">⏰</div>
+                <div>
+                  <div class="contact__detail-label">Horarios</div>
+                  <div class="contact__detail-value">Lunes a Viernes: 8:00 – 18:00</div>
+                  <div class="contact__detail-sub">Sábados: 9:00 – 13:00 · Domingos: Cerrado</div>
+                </div>
+              </div>
+              <div class="contact__detail">
+                <div class="contact__detail-icon">📱</div>
+                <div>
+                  <div class="contact__detail-label">Teléfono / WhatsApp</div>
+                  <div class="contact__detail-value"><a href="tel:+5491151266597" style="color:var(--c-blue-mid);">+54 9 11 5126-6597</a></div>
+                  <div class="contact__detail-sub">Respondemos en menos de 1 hora</div>
+                </div>
+              </div>
+              <div class="contact__detail">
+                <div class="contact__detail-icon">💳</div>
+                <div>
+                  <div class="contact__detail-label">Métodos de pago</div>
+                  <div class="contact__detail-value">Efectivo · Transferencia · Tarjetas</div>
+                  <div class="contact__detail-sub">Todos los bancos · Cuotas disponibles</div>
+                </div>
+              </div>
+            </div>
+            <a href="https://wa.me/5491151266597?text=Hola%2C%20quiero%20consultar%20sobre%20un%20producto%20o%20visitar%20el%20local." class="contact__wa-btn" target="_blank" rel="noopener">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Escribinos por WhatsApp
+            </a>
+          </div>
+
+          <div class="contact__map reveal">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.7!2d-58.5269934!3d-34.5194729!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb110d8bf523f%3A0x954409d4eb42d7aa!2sAutopartes%20M3!5e0!3m2!1ses!2sar!4v1715000000000!5m2!1ses!2sar"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación de Autopartes M3 — Av. Mitre 3495, Munro">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-logo">
+            <img src="assets/logo autopartes m3.png" alt="Autopartes M3" style="height:36px;width:auto;"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+            <div class="logo-mark-fallback" style="display:none;">M3</div>
+            <div class="logo-text">
+              <strong>AUTOPARTES</strong>
+              <span>La pieza que le faltaba a tu auto.</span>
+            </div>
+          </div>
+          <p class="footer__brand-desc">10 años equipando autos en Munro y zona norte. Accesorios, repuestos e instalación profesional con asesoramiento personalizado.</p>
+          <div class="footer__socials">
+            <a href="https://www.instagram.com/autopartesm3" target="_blank" rel="noopener" class="footer__social">📷</a>
+            <a href="https://wa.me/5491151266597" target="_blank" rel="noopener" class="footer__social">💬</a>
+            <a href="https://www.google.com/maps/place/Autopartes+M3/@-34.5194729,-58.5269934,17z/" target="_blank" rel="noopener" class="footer__social">📍</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Productos</h3>
+          <ul class="footer__links">
+            <li><a href="#categorias">Accesorios de interior</a></li>
+            <li><a href="#categorias">Accesorios de exterior</a></li>
+            <li><a href="#categorias">Repuestos</a></li>
+            <li><a href="#categorias">Cuidado del auto</a></li>
+            <li><a href="#categorias">Fundas a medida</a></li>
+            <li><a href="#categorias">Cobertores antigranizo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Servicios</h3>
+          <ul class="footer__links">
+            <li><a href="#nosotros">Instalación profesional</a></li>
+            <li><a href="#nosotros">Asesoramiento gratis</a></li>
+            <li><a href="#contacto">Consulta por WhatsApp</a></li>
+            <li><a href="#galeria">Ver trabajos realizados</a></li>
+            <li><a href="#testimonios">Reseñas de clientes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Contacto</h3>
+          <ul class="footer__links">
+            <li><a href="https://www.google.com/maps/place/Autopartes+M3/@-34.5194729,-58.5269934,17z/" target="_blank" rel="noopener">Av. Mitre 3495, Munro</a></li>
+            <li><a href="tel:+5491151266597">+54 9 11 5126-6597</a></li>
+            <li><a href="https://wa.me/5491151266597" target="_blank" rel="noopener">WhatsApp directo</a></li>
+            <li><a href="https://www.instagram.com/autopartesm3" target="_blank" rel="noopener">@autopartesm3</a></li>
+            <li style="color:#475569;font-size:.81rem;margin-top:6px;">Lun–Vie: 8:00–18:00<br/>Sáb: 9:00–13:00</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 <span>Autopartes M3</span>. Todos los derechos reservados. · Munro, Buenos Aires.</p>
+        <div class="footer__payments">
+          <span>Efectivo</span><span>Transferencia</span><span>Visa</span><span>Mastercard</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══ WA FLOTANTE ══ -->
+  <div class="wa-float">
+    <div class="wa-float__tooltip">
+      <strong>¿Necesitás asesoramiento?</strong>
+      <p>Escribinos y te respondemos en menos de 1 hora.</p>
+    </div>
+    <div class="wa-float__btn-wrap">
+      <a href="https://wa.me/5491151266597?text=Hola%2C%20vi%20el%20sitio%20web%20y%20quiero%20consultar%20sobre%20un%20producto." class="wa-float__btn" target="_blank" rel="noopener" aria-label="WhatsApp Autopartes M3">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      </a>
+      <div class="wa-float__dot"></div>
+    </div>
+  </div>
+
+  <script>
+    // Navbar scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileClose = document.getElementById('mobileClose');
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+    function closeMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+    mobileClose.addEventListener('click', closeMenu);
+    document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+
+</body>
+</html>
