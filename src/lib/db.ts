@@ -1,17 +1,24 @@
-import { DatabaseSync } from "node:sqlite";
-import { mkdirSync } from "node:fs";
-import path from "node:path";
+import { Pool } from "pg";
 
-const DB_PATH =
-  process.env.DATABASE_PATH || path.join(/* turbopackIgnore: true */ process.cwd(), "storage", "db.sqlite");
+const pool = new Pool({
+  connectionString: process.env.DATABASE_URL,
+  // Supabase usa un CA propio; en vez de empaquetarlo, confiamos en el cifrado
+  // TLS sin validar la cadena de certificados (suficiente para este proyecto).
+  ssl: process.env.DATABASE_URL?.includes("localhost") ? false : { rejectUnauthorized: false },
+});
 
-mkdirSync(path.dirname(DB_PATH), { recursive: true });
+// node-postgres: un cliente idle del pool puede emitir 'error' si el servidor
+// corta la conexión (ej: tras dormirse en hosting gratuito); sin este handler
+// ese evento no manejado tira abajo todo el proceso.
+pool.on("error", (err) => {
+  console.error("Error en una conexión idle del pool de Postgres:", err);
+});
 
-const db = new DatabaseSync(DB_PATH, { timeout: 5000 });
-
-db.exec("PRAGMA journal_mode = WAL;");
-
-db.exec(`
+// Si la conexión falla en este punto (ej: DATABASE_URL ausente durante
+// `next build`, o la base tarda en levantar), no debe tirar abajo el
+// proceso con un unhandled rejection: cada query real más adelante va a
+// fallar por su cuenta con un error claro cuando se la awaitee de verdad.
+const ready = pool.query(`
   CREATE TABLE IF NOT EXISTS videos (
     id TEXT PRIMARY KEY,
     source_type TEXT NOT NULL,
@@ -26,10 +33,12 @@ db.exec(`
     transcript TEXT,
     transcript_source TEXT,
     analysis_json TEXT,
-    created_at TEXT NOT NULL,
-    updated_at TEXT NOT NULL
+    created_at TIMESTAMPTZ NOT NULL,
+    updated_at TIMESTAMPTZ NOT NULL
   )
-`);
+`).catch((err) => {
+  console.error("No se pudo inicializar la tabla 'videos':", err);
+});
 
 export type VideoStatus =
   | "queued"
@@ -58,19 +67,21 @@ export interface VideoRow {
   updated_at: string;
 }
 
-export function createVideo(input: {
+export async function createVideo(input: {
   id: string;
   sourceType: "url" | "upload";
   source: string;
-}): void {
+}): Promise<void> {
+  await ready;
   const now = new Date().toISOString();
-  db.prepare(
+  await pool.query(
     `INSERT INTO videos (id, source_type, source, status, created_at, updated_at)
-     VALUES (?, ?, ?, 'queued', ?, ?)`
-  ).run(input.id, input.sourceType, input.source, now, now);
+     VALUES ($1, $2, $3, 'queued', $4, $4)`,
+    [input.id, input.sourceType, input.source, now]
+  );
 }
 
-export function updateVideo(
+export async function updateVideo(
   id: string,
   fields: Partial<{
     filePath: string | null;
@@ -84,7 +95,7 @@ export function updateVideo(
     transcriptSource: string | null;
     analysisJson: string | null;
   }>
-): void {
+): Promise<void> {
   const columns: Record<string, string> = {
     filePath: "file_path",
     title: "title",
@@ -102,27 +113,31 @@ export function updateVideo(
   const values: unknown[] = [];
   for (const [key, column] of Object.entries(columns)) {
     if (key in fields) {
-      sets.push(`${column} = ?`);
       values.push((fields as Record<string, unknown>)[key]);
+      sets.push(`${column} = $${values.length}`);
     }
   }
   if (sets.length === 0) return;
 
-  sets.push("updated_at = ?");
   values.push(new Date().toISOString());
+  sets.push(`updated_at = $${values.length}`);
+
   values.push(id);
 
-  db.prepare(`UPDATE videos SET ${sets.join(", ")} WHERE id = ?`).run(...(values as never[]));
+  await ready;
+  await pool.query(`UPDATE videos SET ${sets.join(", ")} WHERE id = $${values.length}`, values);
 }
 
-export function getVideo(id: string): VideoRow | undefined {
-  return db.prepare("SELECT * FROM videos WHERE id = ?").get(id) as unknown as
-    | VideoRow
-    | undefined;
+export async function getVideo(id: string): Promise<VideoRow | undefined> {
+  await ready;
+  const result = await pool.query("SELECT * FROM videos WHERE id = $1", [id]);
+  return result.rows[0] as VideoRow | undefined;
 }
 
-export function listVideos(): VideoRow[] {
-  return db.prepare("SELECT * FROM videos ORDER BY created_at DESC").all() as unknown as VideoRow[];
+export async function listVideos(): Promise<VideoRow[]> {
+  await ready;
+  const result = await pool.query("SELECT * FROM videos ORDER BY created_at DESC");
+  return result.rows as VideoRow[];
 }
 
-export default db;
+export default pool;

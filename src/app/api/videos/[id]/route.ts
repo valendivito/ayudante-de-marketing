@@ -6,7 +6,7 @@ export async function GET(
   { params }: { params: Promise<{ id: string }> }
 ) {
   const { id } = await params;
-  const video = getVideo(id);
+  const video = await getVideo(id);
   if (!video) {
     return Response.json({ error: "Video no encontrado." }, { status: 404 });
   }

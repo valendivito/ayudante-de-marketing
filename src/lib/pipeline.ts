@@ -1,4 +1,4 @@
-import { mkdirSync, rmSync } from "node:fs";
+import { mkdirSync, rmSync, existsSync } from "node:fs";
 import path from "node:path";
 import { updateVideo, getVideo } from "./db";
 import { downloadVideo } from "./video/download";
@@ -10,7 +10,7 @@ const WORK_DIR =
   process.env.WORK_DIR || path.join(/* turbopackIgnore: true */ process.cwd(), "storage", "frames");
 
 export async function processVideo(id: string): Promise<void> {
-  const video = getVideo(id);
+  const video = await getVideo(id);
   if (!video) return;
 
   const outDir = path.join(WORK_DIR, id);
@@ -21,54 +21,59 @@ export async function processVideo(id: string): Promise<void> {
     let subtitlePath: string | null = null;
 
     if (video.source_type === "url") {
-      updateVideo(id, { status: "downloading", statusDetail: "Descargando video con yt-dlp..." });
+      await updateVideo(id, { status: "downloading", statusDetail: "Descargando video con yt-dlp..." });
       const result = await downloadVideo(video.source, outDir);
       videoPath = result.videoPath;
       subtitlePath = result.subtitlePath;
-      if (result.title) updateVideo(id, { title: result.title });
+      if (result.title) await updateVideo(id, { title: result.title });
     } else {
       if (!video.file_path) throw new Error("No se encontró el archivo subido.");
       videoPath = video.file_path;
     }
 
     const durationSeconds = await getDurationSeconds(videoPath);
-    updateVideo(id, { durationSeconds });
+    await updateVideo(id, { durationSeconds });
 
-    updateVideo(id, { status: "extracting_frames", statusDetail: "Extrayendo frames con ffmpeg..." });
+    await updateVideo(id, { status: "extracting_frames", statusDetail: "Extrayendo frames con ffmpeg..." });
     const { frames, longVideoWarning } = await extractFrames(videoPath, outDir, durationSeconds);
-    updateVideo(id, {
+    await updateVideo(id, {
       frameCount: frames.length,
       statusDetail: longVideoWarning
         ? `Video largo: análisis con muestreo disperso (${frames.length} frames).`
         : null,
     });
 
-    updateVideo(id, { status: "transcribing", statusDetail: "Obteniendo transcripción..." });
+    await updateVideo(id, { status: "transcribing", statusDetail: "Obteniendo transcripción..." });
     const transcriptResult = await getTranscript(videoPath, subtitlePath, outDir);
-    updateVideo(id, {
+    await updateVideo(id, {
       transcript: JSON.stringify(transcriptResult.segments),
       transcriptSource: transcriptResult.source,
     });
 
-    updateVideo(id, { status: "analyzing", statusDetail: "Generando análisis con Claude..." });
+    await updateVideo(id, { status: "analyzing", statusDetail: "Generando análisis con Claude..." });
     const analysis = await analyzeVideo(
       frames,
       transcriptResult.segments,
       transcriptResult.source
     );
 
-    updateVideo(id, {
+    await updateVideo(id, {
       status: "completed",
       statusDetail: null,
       analysisJson: JSON.stringify(analysis),
     });
   } catch (err) {
-    updateVideo(id, {
+    await updateVideo(id, {
       status: "failed",
       statusDetail: null,
       error: err instanceof Error ? err.message : String(err),
     });
   } finally {
     rmSync(outDir, { recursive: true, force: true });
+    // El archivo subido ya cumplió su función (se usó para extraer frames/transcripción);
+    // no hace falta conservarlo, así no se acumula disco en el servidor.
+    if (video.source_type === "upload" && video.file_path && existsSync(video.file_path)) {
+      rmSync(video.file_path, { force: true });
+    }
   }
 }

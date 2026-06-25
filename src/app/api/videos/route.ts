@@ -9,7 +9,8 @@ const UPLOAD_DIR =
   process.env.UPLOAD_DIR || path.join(/* turbopackIgnore: true */ process.cwd(), "storage", "uploads");
 
 export async function GET() {
-  const videos: VideoSummary[] = listVideos().map((v) => ({
+  const rows = await listVideos();
+  const videos: VideoSummary[] = rows.map((v) => ({
     id: v.id,
     sourceType: v.source_type,
     source: v.source,
@@ -40,15 +41,15 @@ export async function POST(request: Request) {
     if (parsed.protocol !== "http:" && parsed.protocol !== "https:") {
       return Response.json({ error: "URL inválida." }, { status: 400 });
     }
-    createVideo({ id, sourceType: "url", source: parsed.toString() });
+    await createVideo({ id, sourceType: "url", source: parsed.toString() });
   } else if (file instanceof File) {
     mkdirSync(UPLOAD_DIR, { recursive: true });
     const ext = path.extname(file.name) || ".mp4";
     const filePath = path.join(UPLOAD_DIR, `${id}${ext}`);
     const buffer = Buffer.from(await file.arrayBuffer());
     writeFileSync(filePath, buffer);
-    createVideo({ id, sourceType: "upload", source: file.name });
-    updateVideo(id, { filePath });
+    await createVideo({ id, sourceType: "upload", source: file.name });
+    await updateVideo(id, { filePath });
   } else {
     return Response.json({ error: "Mandá una URL o un archivo de video." }, { status: 400 });
   }
