@@ -22,7 +22,13 @@ const Line: React.FC<{
 };
 
 // Escena 2: titulo principal del tutorial.
-export const TitleScene: React.FC<{ duration: number }> = ({ duration }) => {
+export const TitleScene: React.FC<{
+  duration: number;
+  eyebrow: string;
+  line1: string;
+  line2: string;
+  subtitle: string;
+}> = ({ duration, eyebrow, line1, line2, subtitle }) => {
   const frame = useCurrentFrame();
   const s = useScale();
   const out = lerp(frame, [duration - 14, duration], [1, 0]);
@@ -42,25 +48,21 @@ export const TitleScene: React.FC<{ duration: number }> = ({ duration }) => {
               textTransform: "uppercase",
             }}
           >
-            Guía oficial · a medida
+            {eyebrow}
           </span>
         </Line>
 
         <Line at={8} frame={frame} s={s}>
-          <div style={{ ...line, fontSize: 132 * s, color: COLORS.ink, letterSpacing: -1 * s }}>
-            Instalá tus fundas
-          </div>
+          <div style={{ ...line, fontSize: 132 * s, color: COLORS.ink, letterSpacing: -1 * s }}>{line1}</div>
         </Line>
 
         <Line at={18} frame={frame} s={s}>
-          <div style={{ ...line, fontSize: 176 * s, color: COLORS.red, letterSpacing: -1 * s }}>
-            Paso a paso
-          </div>
+          <div style={{ ...line, fontSize: 176 * s, color: COLORS.red, letterSpacing: -1 * s }}>{line2}</div>
         </Line>
 
         <Line at={30} frame={frame} s={s} style={{ marginTop: 22 * s }}>
           <span style={{ fontFamily: FONT.body, fontWeight: 500, fontSize: 44 * s, color: COLORS.ink }}>
-            Cortadas para tu auto. Sin adhesivos, sin talleres.
+            {subtitle}
           </span>
         </Line>
       </div>

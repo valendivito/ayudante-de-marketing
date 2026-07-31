@@ -69,13 +69,38 @@ src/
 public/fonts/           Barlow Condensed, Barlow, Great Vibes (.ttf)
 ```
 
-## Personalización rápida
+## Editar los textos (2 formas)
 
-- **Textos / colores**: `src/theme.ts` y cada escena en `src/scenes/`.
-- **Duración**: `DURATION` en `src/Root.tsx` (frames a 30 fps).
-- **Logo real**: dejá el PNG en `public/` y reemplazá `LogoLockup`
-  (`src/components/Logo.tsx`) por un `<Img src={staticFile("logo.png")} />`.
-  El logo actual es una recreación tipográfica, no el asset oficial.
+Todos los textos viven en **[`src/content.ts`](./src/content.ts)**.
+
+**Opción A — a mano (la más simple):**
+Abrí `src/content.ts`, cambiá el texto entre comillas en `defaultContent`
+(marquee, título, sellos, CTA, web, `@usuario`, etc.) y volvé a renderizar:
+
+```bash
+npm run render:all
+```
+
+**Opción B — visual, en Remotion Studio:**
+
+```bash
+npm start
+```
+
+Elegí la composición (`IntroVertical` o `IntroHorizontal`) y editá los campos de
+texto en la **barra lateral derecha**. Se ve el cambio en vivo y Studio puede
+guardarlo de vuelta en el código. (Esto funciona gracias al `schema` de Zod en
+`src/Root.tsx`.)
+
+## Otras personalizaciones
+
+- **Logo**: es el oficial, en `public/logo.png`. Para actualizarlo, reemplazá
+  ese archivo (fondo transparente, misma proporción ~3.44:1).
+- **Colores / tipografías**: `src/theme.ts`.
+- **Duración y ritmo**: `DURATION` en `src/Root.tsx` y los tramos de cada escena
+  en `src/Intro.tsx` (frames a 30 fps).
+- **Íconos de los sellos**: `icon` de cada pill en `src/content.ts`
+  (`ruler` · `factory` · `medal` · `check`).
 
 ---
 

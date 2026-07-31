@@ -3,10 +3,8 @@ import { useCurrentFrame } from "remotion";
 import { COLORS, FONT } from "../theme";
 import { lerp, useScale } from "../util";
 
-const PHRASE = "FÁBRICA DIRECTA · SIN INTERMEDIARIOS · 25 AÑOS · CORTE A MEDIDA · ";
-
 // Barra roja superior con marquee, igual que el header de la web.
-export const TopMarquee: React.FC = () => {
+export const TopMarquee: React.FC<{ phrase: string }> = ({ phrase }) => {
   const frame = useCurrentFrame();
   const s = useScale();
   const drop = lerp(frame, [0, 18], [-1, 0]);
@@ -41,8 +39,8 @@ export const TopMarquee: React.FC = () => {
           color: COLORS.white,
         }}
       >
-        <span>{PHRASE.repeat(8)}</span>
-        <span>{PHRASE.repeat(8)}</span>
+        <span>{phrase.repeat(8)}</span>
+        <span>{phrase.repeat(8)}</span>
       </div>
     </div>
   );

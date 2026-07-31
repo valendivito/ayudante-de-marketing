@@ -4,21 +4,19 @@ import { COLORS, FONT } from "../theme";
 import { FeaturePill } from "../components/UI";
 import { lerp, useScale } from "../util";
 
-type PillDef = { icon: "ruler" | "factory" | "medal"; label: string };
-
-const PILLS: PillDef[] = [
-  { icon: "ruler", label: "Corte a medida" },
-  { icon: "factory", label: "Fábrica directa" },
-  { icon: "medal", label: "25 años de oficio" },
-];
+type Pill = { icon: "ruler" | "factory" | "medal" | "check"; label: string };
 
 // Escena 3: sellos de confianza MDRACING.
-export const PillsScene: React.FC<{ duration: number }> = ({ duration }) => {
+export const PillsScene: React.FC<{
+  duration: number;
+  heading: string;
+  highlight: string;
+  pills: Pill[];
+}> = ({ duration, heading, highlight, pills }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s = useScale();
   const out = lerp(frame, [duration - 12, duration], [1, 0]);
-
   const eyebrow = lerp(frame, [0, 14], [0, 1], Easing.out(Easing.cubic));
 
   return (
@@ -35,15 +33,15 @@ export const PillsScene: React.FC<{ duration: number }> = ({ duration }) => {
             opacity: eyebrow,
           }}
         >
-          Calidad que se <span style={{ color: COLORS.red }}>nota</span>
+          {heading} <span style={{ color: COLORS.red }}>{highlight}</span>
         </span>
 
-        {PILLS.map((p, i) => {
+        {pills.map((p, i) => {
           const at = 8 + i * 9;
           const pop = spring({ frame: frame - at, fps, config: { damping: 15, mass: 0.7 } });
           return (
             <div
-              key={p.label}
+              key={`${p.label}-${i}`}
               style={{
                 opacity: lerp(frame, [at, at + 8], [0, 1]),
                 transform: `translateX(${(1 - pop) * -60 * s}px) scale(${lerp(pop, [0, 1], [0.85, 1])})`,

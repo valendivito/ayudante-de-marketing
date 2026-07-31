@@ -5,14 +5,18 @@ import { Icon } from "../components/UI";
 import { lerp, useScale } from "../util";
 
 // Escena 4: cierre / llamado a la accion.
-export const CtaScene: React.FC = () => {
+export const CtaScene: React.FC<{ text: string; highlight: string; handle: string }> = ({
+  text,
+  highlight,
+  handle,
+}) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const s = useScale();
 
   const pop = spring({ frame, fps, config: { damping: 15, mass: 0.8 } });
   const scale = lerp(pop, [0, 1], [0.8, 1]);
-  const handle = lerp(frame, [10, 22], [0, 1], Easing.out(Easing.cubic));
+  const handleP = lerp(frame, [10, 22], [0, 1], Easing.out(Easing.cubic));
 
   return (
     <AbsoluteFill style={{ justifyContent: "center", alignItems: "center" }}>
@@ -31,15 +35,15 @@ export const CtaScene: React.FC = () => {
               textTransform: "uppercase",
             }}
           >
-            Dale, <span style={{ color: COLORS.red }}>arrancamos</span>
+            {text} <span style={{ color: COLORS.red }}>{highlight}</span>
           </span>
         </div>
 
         <div
           style={{
             marginTop: 40 * s,
-            opacity: handle,
-            transform: `translateY(${(1 - handle) * 16 * s}px)`,
+            opacity: handleP,
+            transform: `translateY(${(1 - handleP) * 16 * s}px)`,
             display: "inline-flex",
             alignItems: "center",
             gap: 14 * s,
@@ -50,7 +54,7 @@ export const CtaScene: React.FC = () => {
         >
           <span style={{ width: 12 * s, height: 12 * s, borderRadius: 999, background: COLORS.red }} />
           <span style={{ fontFamily: FONT.body, fontWeight: 700, fontSize: 40 * s, color: COLORS.white }}>
-            @mdracingfundas
+            {handle}
           </span>
         </div>
       </div>
