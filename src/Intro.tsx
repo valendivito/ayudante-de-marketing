@@ -3,59 +3,40 @@ import { AbsoluteFill, Sequence } from "remotion";
 import { COLORS } from "./theme";
 import { IntroProps } from "./content";
 import { Background } from "./components/Background";
-import { TopMarquee } from "./components/TopMarquee";
-import { BrandFrame } from "./components/BrandFrame";
+import { TopLogo } from "./components/TopLogo";
 import { SpeedLines, SpeedSwipe } from "./components/Racing";
 import { HeroScene } from "./scenes/HeroScene";
 import { TitleScene } from "./scenes/TitleScene";
-import { PillsScene } from "./scenes/PillsScene";
-import { CtaScene } from "./scenes/CtaScene";
+import { CierreScene } from "./scenes/CierreScene";
 
-// Guion (30 fps, 240 frames = 8 s):
-//   0.0-2.6s  Logo (hero)
-//   2.4-5.4s  Titulo del tutorial
-//   5.2-7.4s  Sellos de confianza
-//   7.0-8.0s  Cierre + CTA
-const HERO = { from: 0, dur: 78 };
-const TITLE = { from: 72, dur: 90 };
-const PILLS = { from: 156, dur: 66 };
-const CTA = { from: 210, dur: 30 };
+// Guion (30 fps, 216 frames = 7.2 s):
+//   0.0-2.4s  Reveal del logo
+//   2.2-5.0s  Texto grande (tutorial / fundas para asientos)
+//   4.8-7.2s  Cierre de marca (web + usuario)
+const HERO = { from: 0, dur: 72 };
+const TITLE = { from: 66, dur: 84 };
+const CIERRE = { from: 144, dur: 72 };
 
 export const Intro: React.FC<IntroProps> = (props) => {
   return (
-    <AbsoluteFill style={{ backgroundColor: COLORS.paper }}>
+    <AbsoluteFill style={{ backgroundColor: COLORS.bg }}>
       <Background />
       <SpeedLines start={2} end={24} />
 
       <Sequence from={HERO.from} durationInFrames={HERO.dur}>
-        <HeroScene duration={HERO.dur} kicker={props.heroKicker} />
+        <HeroScene duration={HERO.dur} />
       </Sequence>
       <Sequence from={TITLE.from} durationInFrames={TITLE.dur}>
-        <TitleScene
-          duration={TITLE.dur}
-          eyebrow={props.titleEyebrow}
-          line1={props.titleLine1}
-          line2={props.titleLine2}
-          subtitle={props.titleSubtitle}
-        />
+        <TitleScene duration={TITLE.dur} line1={props.titleLine1} line2={props.titleLine2} />
       </Sequence>
-      <Sequence from={PILLS.from} durationInFrames={PILLS.dur}>
-        <PillsScene
-          duration={PILLS.dur}
-          heading={props.pillsHeading}
-          highlight={props.pillsHeadingHighlight}
-          pills={props.pills}
-        />
-      </Sequence>
-      <Sequence from={CTA.from} durationInFrames={CTA.dur}>
-        <CtaScene text={props.ctaText} highlight={props.ctaHighlight} handle={props.handle} />
+      <Sequence from={CIERRE.from} durationInFrames={CIERRE.dur}>
+        <CierreScene website={props.website} handle={props.handle} />
       </Sequence>
 
       {/* rafaga roja de transicion hacia el cierre */}
-      <SpeedSwipe start={200} end={230} />
+      <SpeedSwipe start={136} end={166} />
 
-      <BrandFrame appearAt={60} website={props.website} />
-      <TopMarquee phrase={props.marquee} />
+      <TopLogo appearAt={56} />
     </AbsoluteFill>
   );
 };

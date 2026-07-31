@@ -5,7 +5,7 @@ import { Intro } from "./Intro";
 import { introSchema, defaultContent } from "./content";
 
 const FPS = 30;
-const DURATION = 240; // 8 segundos
+const DURATION = 216; // 7.2 segundos
 
 // Dos formatos listos para publicar:
 //  - Vertical 1080x1920 -> Reels / TikTok / Shorts
