@@ -7,7 +7,11 @@
     "start": "remotion studio",
     "render:vertical": "remotion render src/index.ts IntroVertical out/mdracing-intro-vertical.mp4",
     "render:horizontal": "remotion render src/index.ts IntroHorizontal out/mdracing-intro-horizontal.mp4",
-    "render:all": "npm run render:vertical && npm run render:horizontal",
+    "render:outro-vertical": "remotion render src/index.ts OutroVertical out/mdracing-outro-vertical.mp4",
+    "render:outro-horizontal": "remotion render src/index.ts OutroHorizontal out/mdracing-outro-horizontal.mp4",
+    "render:intro": "npm run render:vertical && npm run render:horizontal",
+    "render:outro": "npm run render:outro-vertical && npm run render:outro-horizontal",
+    "render:all": "npm run render:intro && npm run render:outro",
     "upgrade": "remotion upgrade"
   },
   "dependencies": {
